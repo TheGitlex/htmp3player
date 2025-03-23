@@ -146,43 +146,8 @@
       <audio id="a1p3">
         <source src="https://cdn.discordapp.com/attachments/984076994910257222/1225069947076481115/Thunderzone_2.mp3?ex=661fca4c&is=660d554c&hm=89aea88f5c7e5e0034c16004f310cadb9b3458645f36abb5401c841b35712c11&">
       </audio>
-      
-      <script>
-        function playAudio(audioId) {
-          var audio = document.getElementById(audioId);
-          if (audio.paused) {
-              audio.volume = 0;
-              audio.currentTime = 0; // Resetting the audio to start from the beginning
-              audio.play();
-              var fadeInterval = setInterval(function() {
-                  if (audio.volume < 0.5) {
-                      audio.volume += 0.025; // Adjust the increment value as needed for smoother or quicker fade-in
-                  } else {
-                      clearInterval(fadeInterval);
-                  }
-              }, 100); 
-          }
-        }
-      
-        function pauseAudio(audioId) {
-          var audio = document.getElementById(audioId);
-          audio.pause();
-          audio.currentTime = 0; // Resetting the audio to start from the beginning
-        }
-
-
-        function heartsback(){
-          var element = document.getElementById("heartsback");
-    if (element.style.display === 'none' || element.style.display === '') {
-        element.style.display = 'inline';
-    } else {
-        element.style.display = 'none';
-    }
-  }
-
-      </script>
+   
   
-
 
 
     <script src="scripts.js"></script>

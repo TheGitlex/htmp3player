@@ -14,7 +14,8 @@ const author = document.querySelector('.album-name');
 const playlist = [
   { src: "nextsteps.mp3", title: "half.cool", author: "Next Steps" },
   { src: "football.mp3", title: "Magic In The Air", author: "Magic System" },
-  { src: "falcon.mp3", title: "Falcon Stomp", author: "F-777"}
+  { src: "falcon.mp3", title: "Falcon Stomp", author: "F-777"},
+  { src: "aria.mp3", title: "Aria-Math", author: "C418"}
 ];
 
 let currentSongIndex = 0;
@@ -117,6 +118,37 @@ loadSong(currentSongIndex);
 
 
 
+function playAudio(audioId) {
+  var audio = document.getElementById(audioId);
+  if (audio.paused) {
+      audio.volume = 0;
+      audio.currentTime = 0; // Resetting the audio to start from the beginning
+      audio.play();
+      var fadeInterval = setInterval(function() {
+          if (audio.volume < 0.5) {
+              audio.volume += 0.025; // Adjust the increment value as needed for smoother or quicker fade-in
+          } else {
+              clearInterval(fadeInterval);
+          }
+      }, 100); 
+  }
+}
+
+function pauseAudio(audioId) {
+  var audio = document.getElementById(audioId);
+  audio.pause();
+  audio.currentTime = 0; // Resetting the audio to start from the beginning
+}
+
+
+function heartsback(){
+  var element = document.getElementById("heartsback");
+if (element.style.display === 'none' || element.style.display === '') {
+element.style.display = 'inline';
+} else {
+element.style.display = 'none';
+}
+}
 
 
 
