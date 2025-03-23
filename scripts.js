@@ -18,7 +18,7 @@ const playlist = [
   { src: "aria.mp3", title: "Aria-Math", author: "C418"},
   { src: "Across the Spider-Verse.mp3", title: "Across The Spider-Verse", author: "Spider-Man"},
   { src: "Crank That - Soulja Boy", title: "Crank That", author: "Soulja Boy"},
-  { src: "FWLR - How We Win", title: "Ho We Win", author: "FLWR"},
+  { src: "FWLR - How We Win", title: "How We Win", author: "FLWR"},
   { src: "Gusttavo Lima - Balada", title: "Balada", author: "Gustavo Lima"},
   { src: "Overwatch - Busan.mp3", title: "Busan", author: "Overwatch"}
 ];
